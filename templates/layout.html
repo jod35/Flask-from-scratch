@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App Series</title>
+</head>
+<body>
+    
+    {% if title %}
+        Flask application| {{ title }}
+    {% else %}
+        Flask application
+    {% endif %}
+        
+    <nav>
+        <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('about_page')}}">About</a>
+        <a href="{{url_for('login_page')}}">Login</a>
+        <a href="{{url_for('contacts_page')}}">Contacts</a>
+    </nav>
+
+    {% block content %}
+    {% endblock content%}
+</body>
+</html>
