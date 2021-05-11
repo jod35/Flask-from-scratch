@@ -1,8 +1,19 @@
 {% extends 'layout.html' %}
 {% block content %}
     <div class="form">
-        <h4>Log In to Your Account</h4>
+        <h4>Create Your Account</h4>
         <form action="{{url_for('signup')}}" method="post">
+            <div class="form-group">
+                <p>{{form.username.label}}</p>
+                <p>
+                    {{form.username(class='form-control')}}
+                </p>
+                
+                {% for error in form.username.errors %}
+                    <small class="error">{{error}}</small>
+                {% endfor %}
+                    
+            </div>
             <div class="form-group">
                 <p>{{form.email.label}}</p>
                 <p>
@@ -21,7 +32,15 @@
                     <small class="error">{{error}}</small>
                 {% endfor %}
             </div>
-
+            <div class="form-group">
+                <p>{{form.confirm.label}}</p>
+                <p>
+                    {{form.confirm(class='form-control')}}
+                </p>
+                {% for error in form.confirm.errors %}
+                    <small class="error">{{error}}</small>
+                {% endfor %}
+            </div>
             <div class="form-group">
                 <p>{{form.submit(class='mybtn')}}</p>
             </div>

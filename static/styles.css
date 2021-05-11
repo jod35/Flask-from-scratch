@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+
+}
+ul{
+    list-style: none;
+}
+header{
+    background-color: rgb(44, 40, 40);
+    padding: 15px;
+    color: white;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.nav-header{
+    padding: 15px;
+    font-size: 20px;
+}
+.navbar{
+    padding: 10px;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    background-color: rgba(122, 125, 128, 0.281);
+
+}
+
+.navbar a{
+    padding: 10px;
+    color: white;
+    text-transform: capitalize;
+    background-color: dodgerblue;
+    border-radius: 10px;
+}
+.main{
+    min-height: 100vh;
+    position: relative;
+    top: 180px;
+    width: 80%;
+    bottom: 200px;
+    margin: auto;
+}
+
+footer{
+    background-color: rgb(44, 40, 40);
+    color: white;
+    height: 200px;
+}
+.posts{
+    padding: 20px;
+}
+.post{
+    padding: 20px;   
+}
+.footer{
+    padding: 20px;
+}
+.form{
+    width:50%;
+    margin: auto;
+    padding: 20px;
+}
+.form-group{
+    padding: 15px;
+}
+.form-control{
+    width: 100%;
+    padding: 15px;
+    border-radius: 7px;
+    border: 1px solid lightgray;
+}
+.mybtn{
+    padding: 20px;
+    border-radius: 30px;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    text-transform: capitalize;
+}
+
+.error{
+    color: red;
+}

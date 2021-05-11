@@ -4,24 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
     <title>Flask App Series</title>
 </head>
 <body>
     
+    <header>
+    <div class="nav-header">
     {% if title %}
-        Flask application| {{ title }}
+        <h1>Flask application | {{ title }}</h1>
     {% else %}
-        Flask application
+        <h1>Flask application</h1>
     {% endif %}
+    </div>
         
-    <nav>
+    <nav class="navbar">
         <a href="{{url_for('index')}}">Home</a>
         <a href="{{url_for('about_page')}}">About</a>
+        <a href="{{url_for('signup')}}">Sign Up</a>
         <a href="{{url_for('login_page')}}">Login</a>
         <a href="{{url_for('contacts_page')}}">Contacts</a>
     </nav>
+    </header>
 
+    <div class="main">
     {% block content %}
     {% endblock content%}
+    </div>
+    <footer>
+        <div class="footer">
+
+        </div>
+    </footer>
+    <script src="{{url_for('static',filename='index.js')}}"></script>
 </body>
 </html>

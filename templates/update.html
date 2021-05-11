@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Work</title>
+    <style>
+        th{
+            width: 200px;
+        }
+        .form{
+            width:80%;
+            margin: auto;
+        }
+        .form input{
+            
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Data base demo</h1>
+    </center>
+    <div class="form">
+        <form action="/update/{{user.id}}/" method="POST">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" value="{{user.username}}">
+            <label for="username">Email</label>
+            <input type="text" name="email" id="email" value="{{user.email}}">
+            <label for="username">Age</label>
+            <input type="text" name="age" id="age" value="{{user.age}}">
+            <label for="username">Gender</label>
+            <select name="gender" id="">
+                <option value="{{user.gender}}">{{user.gender}}</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="not_say">Prefer not to say</option>
+            </select>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</body>
+</html>
