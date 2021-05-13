@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Demo</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}" />
+  </head>
+  <body>
+    <h1>AJAX Demo</h1>
+    <form action="">
+      <label for="x">x</label>
+      <input type="number" name="x" id="x" class="form-control x" />
+      <label for="y">y</label>
+      <input type="number" name="y" id="y" class="form-control y" />
+      <input type="submit" value="Add" />
+    </form>
+    <div class="result"></div>
+    <button id="clear">Clear</button>
+    <script src="{{url_for('static',filename='index.js')}}"></script>
+  </body>
+</html>
